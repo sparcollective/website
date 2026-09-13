@@ -1,3 +1,6 @@
+
+
+Index · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +36,7 @@
       color: var(--text);
       overflow-x: hidden;
     }
-
+ 
     /* ── NAV ── */
     nav {
       position: sticky; top: 0; z-index: 100;
@@ -64,7 +67,25 @@
       transition: background 0.2s, transform 0.15s;
     }
     .nav-cta:hover { background: var(--green-light); transform: translateY(-1px); }
-
+    .nav-pills { display: flex; gap: 8px; align-items: center; }
+    .nav-pill {
+      display: flex; align-items: center; gap: 6px;
+      padding: 5px 12px 5px 8px;
+      border: 0.5px solid rgba(0,152,70,0.45);
+      border-radius: 20px;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.3px;
+      color: var(--green);
+      background: rgba(0,152,70,0.07);
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .nav-pill:hover { background: rgba(0,152,70,0.14); border-color: var(--green); }
+    .nav-pill-plain { cursor: default; }
+    .nav-pill-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--green); flex-shrink: 0;
+    }
+ 
     /* ── HERO ── */
     .hero {
       position: relative;
@@ -134,7 +155,7 @@
       transition: border-color 0.2s, color 0.2s;
     }
     .btn-secondary:hover { border-color: var(--green); color: var(--green); }
-
+ 
     /* ── SECTION BASE ── */
     section { padding: 88px 56px; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
@@ -154,7 +175,7 @@
       color: var(--text-muted); max-width: 500px; margin-bottom: 52px;
     }
     .divider { height: 0.5px; background: var(--border); margin: 0 56px; }
-
+ 
     /* ── WHAT WE DO ── */
     .what { background: var(--bg-raised); }
     .cards-grid {
@@ -189,7 +210,7 @@
       font-size: 14px; font-weight: 300; line-height: 1.65;
       color: var(--text-muted);
     }
-
+ 
     /* ── PRODUCTS / IMAGE SECTION ── */
     .products { background: var(--bg); }
     .products-grid {
@@ -237,7 +258,7 @@
       background: var(--green);
       padding: 4px 12px; border-radius: 12px;
     }
-
+ 
     /* ── STATS BAR ── */
     .stats-bar { background: var(--bg-dark); padding: 0 56px; }
     .stats-inner {
@@ -262,7 +283,7 @@
       letter-spacing: 1.5px; text-transform: uppercase;
       color: var(--text-muted);
     }
-
+ 
     /* ── STACK SECTION ── */
     .stack { background: var(--bg-raised); }
     .stack-list {
@@ -290,7 +311,7 @@
       font-size: 12px; font-weight: 300;
       color: var(--text-muted); line-height: 1.5;
     }
-
+ 
     /* ── ABOUT / FAMILY ── */
     .about { background: var(--bg); }
     .about-inner {
@@ -317,7 +338,7 @@
       border: 0.5px solid var(--green-border);
       padding: 6px 16px; border-radius: 20px;
     }
-
+ 
     /* ── CTA BANNER ── */
     .cta-banner {
       background: var(--green);
@@ -344,7 +365,68 @@
       transition: transform 0.15s, box-shadow 0.2s;
     }
     .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
-
+ 
+    /* ── RECOGNITION STRIP ── */
+    .rec-strip {
+      margin-top: 32px;
+      padding: 16px 20px;
+      border: 0.5px solid rgba(0,152,70,0.35);
+      border-radius: var(--radius);
+      background: rgba(0,152,70,0.05);
+      display: flex; align-items: center;
+      justify-content: space-between; flex-wrap: wrap; gap: 14px;
+    }
+    .rec-strip-left { display: flex; align-items: center; gap: 12px; }
+    .rec-strip-icon {
+      width: 34px; height: 34px; border-radius: 50%;
+      border: 0.5px solid rgba(0,152,70,0.45);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--green); font-size: 17px; flex-shrink: 0;
+    }
+    .rec-strip-title {
+      font-size: 13px; font-weight: 500; color: var(--text);
+    }
+    .rec-strip-sub {
+      font-size: 11px; color: var(--text-muted); margin-top: 2px;
+      letter-spacing: 0.3px;
+    }
+    .rec-strip-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+    .rec-pill {
+      padding: 4px 12px;
+      border: 0.5px solid rgba(0,152,70,0.4);
+      border-radius: 16px;
+      font-size: 13px; font-weight: 600;
+      color: var(--green);
+      background: rgba(0,152,70,0.08);
+      text-decoration: none; letter-spacing: 0.3px;
+      transition: background 0.2s;
+    }
+    .rec-pill:hover { background: rgba(0,152,70,0.16); }
+ 
+    .rec-qr-block {
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      flex-shrink: 0;
+    }
+    .rec-qr-img {
+      width: 110px; height: 110px;
+      border-radius: 10px;
+      border: 2px solid var(--green);
+      padding: 6px;
+      background: #fff;
+      display: block;
+      transition: transform 0.2s;
+    }
+    .rec-qr-img:hover { transform: scale(1.05); }
+    .rec-qr-label {
+      font-size: 13px; font-weight: 600;
+      color: var(--green);
+      letter-spacing: 0.5px;
+    }
+    .rec-qr-sub {
+      font-size: 10px; color: var(--text-muted);
+      letter-spacing: 1px; text-transform: uppercase;
+    }
+ 
     /* ── FOOTER ── */
     footer {
       background: var(--bg-dark);
@@ -390,7 +472,7 @@
   </style>
 </head>
 <body>
-
+ 
 <!-- ── NAV ── -->
 <nav>
   <div class="nav-logo">
@@ -405,9 +487,17 @@
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <div class="nav-pills">
+    <a href="https://www.startupindia.gov.in/content/sih/en/startupgov/startup-recognition-certificate.html?appId=DIPP282744" target="_blank" rel="noopener" class="nav-pill">
+      <span class="nav-pill-dot"></span>#startupindia · DIPP282744
+    </a>
+    <span class="nav-pill nav-pill-plain">
+      <span class="nav-pill-dot"></span>Make in India
+    </span>
+  </div>
   <a href="#contact"><button class="nav-cta">Get in touch</button></a>
 </nav>
-
+ 
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-bg"></div>
@@ -429,7 +519,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ── WHAT WE DO ── -->
 <section class="what" id="stack">
   <div class="section-inner">
@@ -470,9 +560,9 @@
     </div>
   </div>
 </section>
-
+ 
 <div class="divider"></div>
-
+ 
 <!-- ── PRODUCTS ── -->
 <section class="products" id="products">
   <div class="section-inner">
@@ -501,7 +591,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ── STATS ── -->
 <div class="stats-bar">
   <div class="stats-inner">
@@ -523,7 +613,7 @@
     </div>
   </div>
 </div>
-
+ 
 <!-- ── TECH STACK ── -->
 <section class="stack">
   <div class="section-inner">
@@ -542,9 +632,9 @@
     </div>
   </div>
 </section>
-
+ 
 <div class="divider"></div>
-
+ 
 <!-- ── ABOUT ── -->
 <section class="about" id="about">
   <div class="about-inner">
@@ -556,18 +646,41 @@
       <div class="section-tag">About us</div>
       <h2 class="section-title">A family collective with engineering at its core</h2>
       <p class="section-sub">SPAR Collective LLP is a family-owned engineering firm built on decades of hands-on experience across embedded systems, industrial automation, and IoT product development. We build things that work — in the field, not just on paper.</p>
-      
+ 
+      <div class="rec-strip">
+        <div class="rec-strip-left">
+          <div class="rec-strip-icon"><i class="ti ti-rosette" aria-hidden="true"></i></div>
+          <div>
+            <div class="rec-strip-title">Government Recognised</div>
+            <div class="rec-strip-sub">DPIIT · Internet of Things · Manufacturing & Warehouse</div>
+            <div class="rec-strip-pills" style="margin-top:10px;">
+              <a href="https://www.startupindia.gov.in/content/sih/en/startupgov/startup-recognition-certificate.html?appId=DIPP282744" target="_blank" rel="noopener" class="rec-pill">#startupindia · DIPP282744 ↗</a>
+              <span class="rec-pill">Make in India</span>
+              <span class="rec-pill">Valid upto 2036</span>
+            </div>
+          </div>
+        </div>
+        <div class="rec-qr-block">
+          <a href="https://www.startupindia.gov.in/content/sih/en/startupgov/startup-recognition-certificate.html?appId=DIPP282744" target="_blank" rel="noopener">
+            <img src="dipp_qr.png" alt="Scan to verify SPAR Collective DIPP282744 on Startup India" class="rec-qr-img"/>
+          </a>
+          <div class="rec-qr-label">#startupindia</div>
+          <div class="rec-qr-label" style="font-size:11px;margin-top:-2px;">DIPP282744</div>
+          <div class="rec-qr-sub">Scan to verify</div>
+        </div>
+      </div>
+ 
     </div>
   </div>
 </section>
-
+ 
 <!-- ── CTA ── -->
 <section class="cta-banner" id="contact">
   <h2>Let's build something together</h2>
   <p>Have an IoT or IIoT challenge? We'd love to hear about it.</p>
   <a href="mailto:hello@sparcollective.in"><button class="btn-white">Get in touch →</button></a>
 </section>
-
+ 
 <!-- ── FOOTER ── -->
 <footer>
   <div class="footer-top">
@@ -609,6 +722,14 @@
     
   </div>
 </footer>
-
+ 
 </body>
 </html>
+ 
+
+
+
+
+
+
+
