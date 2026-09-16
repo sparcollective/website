@@ -378,16 +378,17 @@
     .about { background: var(--bg); }
     .about-inner {
       max-width: 1100px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
     }
     .about-image {
       border-radius: var(--radius-lg); overflow: hidden;
       border: 0.5px solid var(--border);
+      line-height: 0;
     }
     .about-image img {
-      width: 100%; height: auto; object-fit: contain;
-      filter: brightness(0.85) saturate(0.8);
+      width: 100%; height: auto;
       display: block;
+      filter: brightness(0.88) saturate(0.85);
     }
     .about-text .section-sub { margin-bottom: 32px; }
     .about-names {
